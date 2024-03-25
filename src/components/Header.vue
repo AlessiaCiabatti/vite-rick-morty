@@ -2,6 +2,7 @@
 <script>
 // import store no default
 import {store} from '../assets/data/store';
+
   export default {
     data(){
       store

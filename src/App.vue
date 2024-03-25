@@ -22,7 +22,7 @@ import Main from './components/Main.vue';
           // risposta
           .then(result =>{
             this.store.cardList = result.data.results;
-            console.log(result.data.results);
+            console.log(this.store.cardList);
           })
           //errore
           .catch(error =>{

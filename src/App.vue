@@ -4,11 +4,13 @@ import axios from 'axios';
 import {store} from './assets/data/store';
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
+import Footer from './components/partials/Footer.vue';
 
   export default {
     components:{
         Header,
         Main,
+        Footer,
       },
       data(){
         return{
@@ -40,6 +42,7 @@ import Main from './components/Main.vue';
 <template>
   <Header />
   <Main />
+  <Footer />
 </template>
 
 

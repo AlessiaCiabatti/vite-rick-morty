@@ -22,7 +22,7 @@ import {store} from '../assets/data/store';
 <template>
 
 <div class="my-5 container">
-  <div class="row row-cols-3">
+  <div class="row row-cols-4">
     <Card 
     v-for="card in this.store.cardList"
     :key="card.id" 

@@ -19,6 +19,7 @@
     <img :src="image" class="card-img-top" :alt="name">
     <div class="card-body">
       <h5 class="card-title">{{name}}</h5>
+      <hr>
       <p class="card-text">{{status}}</p>
       <p class="card-text">{{species}}</p>
     </div>
@@ -28,6 +29,11 @@
 </template>
 
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+.card{
+  border: none;
+  img{
+    border-radius: 50% 20% / 10% 40%;
+  }
+}
 </style>

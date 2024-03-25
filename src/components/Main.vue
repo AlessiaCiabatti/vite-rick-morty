@@ -28,7 +28,7 @@ import {store} from '../assets/data/store';
     :key="card.id" 
     :name="card.name"
     :status="card.status"
-    :Species="card.Species"
+    :species="card.species"
     :image="card.image"
     />
 

@@ -30,10 +30,13 @@
 
 
 <style lang="scss">
-.card{
+
+
+.card.text-center{
   border: none;
   img{
     border-radius: 50% 20% / 10% 40%;
   }
 }
+
 </style>

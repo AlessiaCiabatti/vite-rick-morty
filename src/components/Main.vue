@@ -38,7 +38,6 @@ import {store} from '../assets/data/store';
 </template>
 
 
-
-<style lang="scss" scoped>
+<style lang="scss">
 
 </style>

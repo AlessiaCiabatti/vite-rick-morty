@@ -21,19 +21,26 @@ import {store} from '../assets/data/store';
   <div class="d-flex my_container justify-content-between ">
 
     <div>
-      search
+      <div class="input-group mb-3">
+        <input type="text" class="form-control me-4" placeholder="Search Character" aria-label="Search Character">
+      </div>
     </div>
 
     <div>
-      select
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Select Status</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
     </div>
 
     <div>
-      button search
+      <button type="button" class="btn btn-info">Search</button>
     </div>
 
     <div>
-      button reset
+      <button type="button" class="btn btn-warning">Reset</button>
     </div>
 
   </div>
@@ -43,9 +50,14 @@ import {store} from '../assets/data/store';
 
 
 <style lang="scss">
+
+
 .my_container{
   width: 50%;
   margin: 0 auto;
+  .input-group{
+    width: 120%;
+  }
 }
 
 </style>

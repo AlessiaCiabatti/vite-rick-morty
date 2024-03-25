@@ -1,2 +1,7 @@
+@use './partials/general';
+
 //importo bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
+
+
+@import '@fontsource/roboto/index.css';

@@ -25,7 +25,12 @@ import {store} from '../assets/data/store';
   <div class="row row-cols-3">
     <Card 
     v-for="card in this.store.cardList"
-    :key="card.id" />
+    :key="card.id" 
+    :name="card.name"
+    :status="card.status"
+    :Species="card.Species"
+    :image="card.image"
+    />
 
   </div>
 </div>

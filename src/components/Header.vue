@@ -14,7 +14,7 @@ import {store} from '../assets/data/store';
 
 <template>
   <div>
-    Header
+    <!-- Header -->
   </div>
 </template>
 

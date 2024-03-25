@@ -21,7 +21,8 @@ import Main from './components/Main.vue';
           axios.get(this.store.apiUrl)
           // risposta
           .then(result =>{
-            console.log(result.data);
+            this.store.cardList = result.data.results;
+            console.log(result.data.results);
           })
           //errore
           .catch(error =>{

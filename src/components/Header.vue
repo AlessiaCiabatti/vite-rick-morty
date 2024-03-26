@@ -5,9 +5,11 @@ import {store} from '../assets/data/store';
 
   export default {
     data(){
+    // il return
+      return{
       store
+      }
     }
-    
   }
 </script>
 
@@ -24,11 +26,14 @@ import {store} from '../assets/data/store';
       <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
       <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
       <datalist id="datalistOptions">
-        <option value="San Francisco"></option>
-        <option value="New York"></option>
+        <!-- ciclo for per i nomi dentro la lista -->
+        <option v-for="(name, index) in this.store.namesList" 
+        :key="index"
+        :value="name"></option>
+        <!-- <option value="New York"></option>
         <option value="Seattle"></option>
         <option value="Los Angeles"></option>
-        <option value="Chicago"></option>
+        <option value="Chicago"></option> -->
       </datalist>
     </div>
 

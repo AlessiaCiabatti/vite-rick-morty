@@ -55,7 +55,7 @@ import Footer from './components/partials/Footer.vue';
 
 
 <template>
-  <Header />
+  <Header :store="store"/>
   <Main />
   <Footer />
 </template>

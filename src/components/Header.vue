@@ -1,6 +1,7 @@
 
 <script>
 // import store no default
+import axios from 'axios';
 import {store} from '../assets/data/store';
 
   export default {
@@ -14,8 +15,8 @@ import {store} from '../assets/data/store';
     methods:{
       startSearch(){
         console.log('ricerca nome');
-        queryParams= {
-          nameToSearch: this.nameToSearch
+        this.store.queryParams= {
+          name: this.nameToSearch
         }
         this.$emit('startSearch')
       }
@@ -59,7 +60,7 @@ import {store} from '../assets/data/store';
     </div>
 
     <div>
-      <button type="button" class="btn btn-info">Search</button>
+      <button @click="startSearch" type="button" class="btn btn-info">Search</button>
     </div>
 
     <div>

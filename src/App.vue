@@ -20,7 +20,9 @@ import Footer from './components/partials/Footer.vue';
 
       methods:{
         getApi(){
-          axios.get(this.store.apiUrl)
+          axios.get(this.store.apiUrl, {
+            params: this.store.queryParams,
+          })
           // risposta
           .then(result =>{
             this.store.cardList = result.data.results;

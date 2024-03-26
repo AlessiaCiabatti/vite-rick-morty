@@ -7,7 +7,13 @@ import {store} from '../assets/data/store';
     data(){
     // il return
       return{
-      store
+      store,
+      nameToSearch: ''
+      }
+    },
+    methods:{
+      startSearch(){
+        console.log('ricerca nome');
       }
     }
   }
@@ -24,7 +30,9 @@ import {store} from '../assets/data/store';
 
     <div>
       <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
-      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." 
+      v-model.trim="nameToSearch"
+      @keyup.enter="startSearch">
       <datalist id="datalistOptions">
         <!-- ciclo for per i nomi dentro la lista -->
         <option v-for="(name, index) in this.store.namesList" 

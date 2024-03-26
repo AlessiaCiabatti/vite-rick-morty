@@ -9,4 +9,8 @@ export const store = reactive({
   nameUrl: 'https://rickandmortyapi.com/api/character/?name',
   // nuovo array con solo i nomi
   namesList: [],
+  queryParams: {
+
+  }
+  
 })

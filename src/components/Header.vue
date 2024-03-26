@@ -14,6 +14,10 @@ import {store} from '../assets/data/store';
     methods:{
       startSearch(){
         console.log('ricerca nome');
+        queryParams= {
+          nameToSearch: this.nameToSearch
+        }
+        this.$emit('startSearch')
       }
     }
   }

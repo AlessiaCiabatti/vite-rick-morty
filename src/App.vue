@@ -55,7 +55,7 @@ import Footer from './components/partials/Footer.vue';
 
 
 <template>
-  <Header :store="store"/>
+  <Header @startSearch="getApi"/>
   <Main />
   <Footer />
 </template>

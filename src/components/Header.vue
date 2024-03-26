@@ -21,9 +21,15 @@ import {store} from '../assets/data/store';
   <div class="d-flex my_container justify-content-between ">
 
     <div>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control me-4" placeholder="Search Character" aria-label="Search Character">
-      </div>
+      <!-- <label for="exampleDataList" class="form-label">Datalist example</label> -->
+      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+      <datalist id="datalistOptions">
+        <option value="San Francisco"></option>
+        <option value="New York"></option>
+        <option value="Seattle"></option>
+        <option value="Los Angeles"></option>
+        <option value="Chicago"></option>
+      </datalist>
     </div>
 
     <div>

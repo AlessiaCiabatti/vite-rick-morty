@@ -30,10 +30,25 @@ import Footer from './components/partials/Footer.vue';
           .catch(error =>{
             console.log(error);
           })
-        }
+        },
+
+        // getAllNames
+        getAllNames(){
+          axios.get(this.store.nameUrl)
+          .then(result =>{
+            console.log(result.data.results);
+            // rimappo per avere solo i nomi in un array vuoto, pusha automaticamente nell'array
+            this.store.namesList = result.data.results.map(item => item.name)
+            console.log(this.store.namesList)
+          })
+        },
+
       },
+      
       mounted(){
         this.getApi()
+        // richiama
+        this.getAllNames()
       }
   }
 </script>
@@ -49,4 +64,5 @@ import Footer from './components/partials/Footer.vue';
 
 <style lang="scss">
 @use './assets/scss/main.scss';
+
 </style>

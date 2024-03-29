@@ -36,7 +36,7 @@ import Footer from './components/partials/Footer.vue';
 
         // getAllNames
         getAllNames(){
-          axios.get(this.store.nameUrl)
+          axios.get(this.store.apiUrl)
           .then(result =>{
             console.log(result.data.results);
             // rimappo per avere solo i nomi in un array vuoto, pusha automaticamente nell'array

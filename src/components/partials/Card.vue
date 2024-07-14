@@ -13,7 +13,7 @@
 
 <template>
   
-<div class="col mb-5 ">
+<div class="mb-5 ">
 
   <div class="card text-center" style="width: 18rem;">
     <img :src="image" class="card-img-top" :alt="name">
@@ -33,9 +33,10 @@
 
 
 .card.text-center{
+  background-color: rgba(255, 255, 255, 0);
   border: none;
   img{
-    border-radius: 50% 20% / 10% 40%;
+    border-radius: 0 20% / 10% 40%;
   }
 }
 

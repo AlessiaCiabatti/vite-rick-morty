@@ -1,6 +1,8 @@
 <script>
 import axios from 'axios';
 //importa store
+// con graffe o senza graffe, differenza: 
+// export default se non c'è sono costretto ad importare ci le graffe, se c'è export default, devo usare lel graffe
 import {store} from './assets/data/store';
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
@@ -27,6 +29,16 @@ import Footer from './components/partials/Footer.vue';
           .then(result =>{
             this.store.cardList = result.data.results;
             console.log(this.store.cardList);
+            // adesso devo andare in store per fare un array vuoto nel quale ci pusho con map cosa????
+
+            // cico tutti i characters per prendere tutti gli stati
+            this.store.cardList.forEach( item => {
+              console.log(item.status)
+              // se item.status non è contenuto in store.statusList lo pusho
+              if(!this.store.statusList.includes(item.status)){
+                this.store.statusList.push(item.status);
+              }
+            });
           })
           //errore
           .catch(error =>{
@@ -57,7 +69,7 @@ import Footer from './components/partials/Footer.vue';
 
 
 <template>
-  <Header @startSearch="getApi"/>
+  <Header @ricerca="getApi"/>
   <Main />
   <Footer />
 </template>
@@ -66,5 +78,10 @@ import Footer from './components/partials/Footer.vue';
 
 <style lang="scss">
 @use './assets/scss/main.scss';
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(238, 211, 244)
+}
 
 </style>

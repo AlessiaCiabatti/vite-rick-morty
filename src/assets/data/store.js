@@ -5,6 +5,7 @@ import { reactive }  from 'vue'
 export const store = reactive({
   apiUrl: 'https://rickandmortyapi.com/api/character',
   cardList: [],
+  statusList: [],
   // nuova api
   // nameUrl: 'https://rickandmortyapi.com/api/character/?name=',
   // nuovo array con solo i nomi
